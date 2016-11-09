@@ -13,5 +13,11 @@ RUN mkdir -p /var/www/html
 ADD ./ /var/www/html
 WORKDIR /var/www/html
 
+# Install composer and run composer install
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+RUN php composer-setup.php
+RUN php composer.phar install
+RUN rm composer.phar
+
 # set cmd command
 CMD ["/usr/bin/supervisord"]
