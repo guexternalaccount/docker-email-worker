@@ -86,6 +86,8 @@ try {
     $console->handle($arguments);
 } catch (\Phalcon\Exception $e) {
     echo $e->getMessage();
-
+    exit(255);
+} catch (\Exception $e) {
+    echo $e->getMessage();
     exit(255);
 }
