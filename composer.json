@@ -1,0 +1,7 @@
+{
+  "require": {
+      "php-amqplib/php-amqplib": "2.6.*",
+      "phpmailer/phpmailer": "~5.2"
+  }
+}
+
