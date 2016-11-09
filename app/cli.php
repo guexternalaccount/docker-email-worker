@@ -87,4 +87,7 @@ try {
 } catch (\Phalcon\Exception $e) {
     echo $e->getMessage();
     exit(2);
+} catch (\Exception $e) {
+    echo $e->getMessage();
+    exit(2);
 }
