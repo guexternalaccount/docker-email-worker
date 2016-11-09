@@ -8,9 +8,9 @@ RUN apt update && apt install -y supervisor;
 # Copy supervisord config
 COPY docker-config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Create directory /var/www/html/app and set it as a mount point 
+# Create directory /var/www/html/app and set it as a mount point
 RUN mkdir -p /var/www/html
-VOLUME /var/www/html
+ADD ./ /var/www/html
 WORKDIR /var/www/html
 
 # set cmd command
